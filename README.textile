@@ -1,0 +1,31 @@
+h2. iPhone2iTunes! YEah!
+
+h3. The Point
+
+Browse and watch all the video files you have in your iTunes library on your iPhone.
+
+<code> This only works locally. Unless you expose your webserver and you have kick ass bandwidth.</code>
+
+h3. Setup
+
+Edit /etc/apache2/httpd.conf and set its users to your user name:
+
+<pre><code>
+	User jmaddox
+	Group www
+</code></pre>
+
+Symlink your tv and movie directories from your iTunes library to your webserver directory:
+
+<pre><code>
+$	ln -s /Users/jmaddox/Music/iTunes/iTunes\ Music/Movies movies
+$	ln -s /Users/jmaddox/Music/iTunes/iTunes\ Music/TV\ Shows tv
+</code></pre>
+
+Make SURE you use the same symbolic link names as above.
+
+Dump all of this at the root of /Library/WebServer/Documents
+
+Turn on web sharing!
+
+That should be it. Simple as pie.
