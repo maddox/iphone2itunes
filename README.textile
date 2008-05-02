@@ -15,6 +15,12 @@ Edit /etc/apache2/httpd.conf and set its users to your user name:
 	Group www
 </code></pre>
 
+Don't close the file! Uncomment the php module too if you haven't already done that.
+
+<pre><code>
+	LoadModule php5_module libexec/apache2/libphp5.so
+</code></pre>
+
 Symlink your tv and movie directories from your iTunes library to your webserver directory:
 
 <pre><code>
